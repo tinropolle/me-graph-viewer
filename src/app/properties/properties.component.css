@@ -1,0 +1,14 @@
+label[for="properties"] {
+    cursor: pointer;
+    font-weight: bold;
+}
+.propertiesTableContainer {
+    height: 240px;
+    overflow-y: scroll;
+}
+.propertiesTableContainer > table > thead > tr > th {
+    width: 20%;
+}
+.propertiesTableContainer > table > tbody > tr > td {
+    width: 20%;
+}

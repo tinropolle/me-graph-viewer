@@ -1,0 +1,24 @@
+<div class="table" (window:resize)="onResize()">
+  <div class="table-cell">
+    <app-drawer
+      [graph]="graph"
+      (checkNode)="objectListCheckNode($event)"
+      (selectNode)="objectListSelectNode($event)"></app-drawer>
+  </div>
+  <div class="table-cell table-cell-info">
+    <div #info id="info-container">
+      <app-raw
+        (graph)="setGraph($event)"></app-raw>
+      <app-object-list
+        [nodes]="nodes"
+        (mouseOver)="objectListMouseOver($event)"
+        (checkAllNodes)="objectListCheckAllNodes($event)"
+        (checkNode)="objectListCheckNode($event)"
+        (filterNodes)="filterNodes($event)"
+        (hideCheckedNodes)="hideCheckedNodes($event)"
+        (selectNode)="objectListSelectNode($event)"></app-object-list>
+      <app-properties
+        [node]="nodeProperties"></app-properties>
+    </div>
+  </div>
+</div>

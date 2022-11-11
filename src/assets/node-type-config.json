@@ -1,0 +1,195 @@
+{
+    "Core.Domain.Model.CalculatedMeasure": {
+        "regexp": "(Cube: [^,]+),[^C]+CalculatedMeasure: ([^,]+)",
+        "length": 2,
+        "mainColor": "#E7E5E4",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.CalculatedMember": {
+        "regexp": "(Cube: [^,]+),[^C]+CalculatedMember: ([^,]+)",
+        "length": 2,
+        "mainColor": "#E7E5E4",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.ClientRevisionDefinition": {
+        "regexp": "",
+        "length": 0,
+        "label": "Client revision",
+        "mainColor": "#DC2626",
+        "textColor": "white"
+    },
+    "Core.Domain.Model.ColumnDefinitionFact": {
+        "regexp": "Table: ([^,]+),[^C]+Column: ([^,]+)",
+        "length": 2,
+        "mainColor": "#FDE68A",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.ColumnDefinitionImport": {
+        "regexp": "(?:RawImport|Table): ([^,]+),[^C]+Column: ([^,]+)",
+        "length": 2,
+        "mainColor": "#A5F3FC",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.ColumnDefinitionInterface": {
+        "regexp": "Table: ([^,]+),[^C]+Column: ([^,]+)",
+        "length": 2,
+        "mainColor": "#E7E5E4",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.ColumnDefinition": {
+        "regexp": "Table: ([^,]+),[^C]+Column: ([^,]+)",
+        "length": 2,
+        "mainColor": "#E7E5E4",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.ColumnDefinitionUnion": {
+        "regexp": "Table: ([^,]+),[^C]+Column: ([^,]+)",
+        "length": 2,
+        "mainColor": "#E7E5E4",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.DerivedColumnDefinitionFact": {
+        "regexp": "Table: ([^,]+),[^C]+Column: ([^,]+)",
+        "length": 2,
+        "mainColor": "#FDE68A",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.DetailedReport": {
+        "regexp": "(Detailed Report: [^,]+)",
+        "length": 1,
+        "mainColor": "#FECACA",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.DetailedReportColumn": {
+        "regexp": "(Detailed Report: [^,]+),[^D]+Detailed Report Column: ([^,]+)",
+        "length": 2,
+        "mainColor": "#FECACA",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.DimensionAxis": {
+        "regexp": "(Summary Report: [^,]+),[^D]+Dimension Axis: ",
+        "length": 1,
+        "mainColor": "#E11D48",
+        "textColor": "white"
+    },
+    "Core.Domain.Model.DimensionDefinitionHierarchical": {
+        "regexp": "(Dimension: [^,]+)",
+        "length": 1,
+        "mainColor": "#FED7AA",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.DimensionDefinitionPredefinedMembers": {
+        "regexp": "(Dimension: [^,]+)",
+        "length": 1,
+        "mainColor": "#E7E5E4",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.DimensionDefinitionTime": {
+        "regexp": "(Dimension: [^,]+)",
+        "length": 1,
+        "mainColor": "#E7E5E4",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.DimensionOwnedCalculatedMeasure": {
+        "regexp": "(Cube: [^,]+),[^D]+DimensionOwnedCalculatedMeasure: ([^,]+)",
+        "length": 2,
+        "mainColor": "#E7E5E4",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.DimensionUsage": {
+        "regexp": "(Cube: [^,]+),[^M]+MeasureGroup: ([^,]+),[^D]+Dimension Usage: ([^,]+)",
+        "length": 3,
+        "mainColor": "#E7E5E4",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.DynamicDimension": {
+        "regexp": "(Dimension: [^,]+)",
+        "length": 1,
+        "mainColor": "#E7E5E4",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.ImportDefinition": {
+        "regexp": "(RawImport: [^,]+)",
+        "length": 1,
+        "mainColor": "#0284C7",
+        "textColor": "white"
+    },
+    "Core.Domain.Model.MeasureGroup": {
+        "regexp": "(Cube: [^,]+),[^M]+(MeasureGroup: [^,]+)",
+        "length": 2,
+        "mainColor": "#E7E5E4",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.MeasureOnAxis": {
+        "regexp": "(Summary Report: [^,]+),[^M]+Measure On Axis: ([^,]+)",
+        "length": 2,
+        "mainColor": "#E7E5E4",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.TabledBasedDetailReport": {
+        "regexp": "(Detailed Report: [^,]+)",
+        "length": 1,
+        "mainColor": "#EA580C",
+        "textColor": "white"
+    },
+    "Core.Domain.Model.TableDefinitionConditions": {
+        "regexp": "Table: ([^,]+)",
+        "length": 1,
+        "mainColor": "#155E75",
+        "textColor": "white"
+    },
+    "Core.Domain.Model.TableDefinitionCvt": {
+        "regexp": "Table: ([^,]+)",
+        "length": 1,
+        "mainColor": "#0284C7",
+        "textColor": "white"
+    },
+    "Core.Domain.Model.TableDefinitionDimension": {
+        "regexp": "Table: ([^,]+)",
+        "length": 1,
+        "mainColor": "#E7E5E4",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.TableDefinitionFact": {
+        "regexp": "Table: ([^,]+)",
+        "length": 1,
+        "mainColor": "#E7E5E4",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.TableDefinitionJoin": {
+        "regexp": "Table: ([^,]+)",
+        "length": 1,
+        "mainColor": "#E7E5E4",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.TableDefinitionScript": {
+        "regexp": "Table: ([^,]+)",
+        "length": 1,
+        "mainColor": "#E7E5E4",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.TableDefinitionStatic": {
+        "regexp": "Table: ([^,]+)",
+        "length": 1,
+        "mainColor": "#E7E5E4",
+        "textColor": "black"
+    },
+    "Core.Domain.Model.TableDefinitionUnion": {
+        "regexp": "Table: ([^,]+)",
+        "length": 1,
+        "mainColor": "#155E75",
+        "textColor": "white"
+    },
+    "Core.Domain.Model.TableProductInterface": {
+        "regexp": "Table: ([^,]+)",
+        "length": 1,
+        "mainColor": "#0891B2",
+        "textColor": "white"
+    },
+    "Infrastructure.DependencyGraph.BrokenReference": {
+        "regexp": "([^,]+)",
+        "length": 1,
+        "mainColor": "#212121",
+        "textColor": "white"
+    }
+}

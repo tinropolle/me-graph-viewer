@@ -1,0 +1,50 @@
+<label
+    for="object-list"
+    class="section-label mb-0"
+    (click)="toggleCollapsed()">
+        Object List
+        <span [ngClass]="{ 'fa-caret-down': isCollapsed, 'fa-caret-up': !isCollapsed }" class="fa"></span>
+</label>
+<div id="objectList" class="object-list mt-1" [collapse]="isCollapsed">
+    <div class="input-group input-group-sm mb-1">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="objectListFilterLabel">Filter</span>
+        </div>
+        <input name="objectListFilter" #objectListFilter class="form-control" type="text" (keyup)="onFilterChange($event)">
+        <div *ngIf="filterText" class="input-group-append">
+            <button class="btn btn-outline-danger" type="button" (click)="onClearFilter()">X</button>
+        </div>
+    </div>
+    <div id="objectListTableContainer">
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <th class="p-0 pl-1"><input type="checkbox" (change)="checkAll($event)"></th>
+                    <th class="p-0 pl-1">Label</th>
+                </tr>
+            </thead>
+            <tbody *ngIf="nodes.length">
+                <tr *ngFor="let node of nodes">
+                    <td class="p-0 pl-1"
+                        (mouseover)="hover(node.id)"
+                        (mouseleave)="mouseLeaveNode()">
+                        <input
+                            class="mr-1"
+                            type="checkbox"
+                            (change)="check(node.id)"
+                            [checked]="node.isChecked">
+                    </td>
+                    <td class="p-0 pl-1 node-name"
+                        [ngClass]="{ 'node-visible': !node.isHidden, 'text-primary': node.isSelected }"
+                        title="Type: {{node.nodeType}}"
+                        (click)="select(node.id)"
+                        (mouseover)="hover(node.id)"
+                        (mouseleave)="mouseLeaveNode()">{{node.label}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button class="btn btn-light btn-sm mr-1" (click)="onHideCheckedNodes()">Hide</button>
+    <button class="btn btn-light btn-sm mr-1" (click)="onShowCheckedNodes()">Show</button>
+</div>
+<hr>

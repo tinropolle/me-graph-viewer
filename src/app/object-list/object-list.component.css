@@ -1,0 +1,23 @@
+div > button.btn-light {
+    height: 1.4rem;
+    padding: 0 0.2rem;
+    font-size: 0.75rem;
+    width: 4rem;
+}
+.object-list > div#objectListTableContainer {
+    height: 240px;
+    overflow-y: scroll;
+}
+.object-list > div > table > thead > tr > th {
+    width: 20%;
+}
+.object-list > div > table > tbody > tr > td {
+    color: lightgray;
+    width: 20%;
+}
+.object-list > div > table > tbody > tr > td.node-visible {
+    color: black;
+}
+.node-name {
+    cursor: default;
+}

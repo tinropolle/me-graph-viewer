@@ -1,0 +1,39 @@
+<label
+    class="section-label mb-0"
+    (click)="toggleCollapsed()">
+        Object Properties 
+        <span [ngClass]="{ 'fa-caret-down': isCollapsed, 'fa-caret-up': !isCollapsed }" class="fa"></span>
+</label>
+<input class="ml-3 mr-1" id="showAll" name="showAll" type="checkbox" [(ngModel)]="showAll" (change)="fillProperties()">
+<label for="showAll">Show all</label>
+<div id="properties" class="properties mt-1" [collapse]="isCollapsed">
+    <div class="input-group input-group-sm mb-1">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Node</span>
+        </div>
+        <input name="nodeName" class="form-control" type="text" [title]="nodeName" readonly [(ngModel)]="nodeName">
+    </div>
+    <div class="propertiesTableContainer">
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <th class="p-0 pl-1">Property</th>
+                    <th class="p-0 pl-1">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let prop of properties">
+                    <td class="p-0 pl-1" title="{{prop.property}}: {{prop.value}}">{{prop.property}}</td>
+                    <td class="p-0 pl-1" title="{{prop.property}}: {{prop.value}}">
+                        <a
+                            *ngIf="prop.property == 'url'"
+                            href="{{prop.value}}"
+                            target="_blank">{{prop.value}}</a>
+                        <span *ngIf="prop.property != 'url'">{{prop.value}}</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<hr>

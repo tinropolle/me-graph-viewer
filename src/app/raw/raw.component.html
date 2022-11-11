@@ -1,0 +1,23 @@
+<label
+    for="object-list"
+    class="section-label mb-0"
+    (click)="toggleCollapsed()">
+        Graph JSON 
+        <span [ngClass]="{ 'fa-caret-down': isCollapsed, 'fa-caret-up': !isCollapsed }" class="fa mr-1"></span>
+        <span *ngIf="isLoading" class="fa fa-clock-o text-primary"></span>
+        <span *ngIf="!isLoading && isValid" class="fa fa-check-circle text-success"></span>
+        <span *ngIf="!isLoading && !isValid" class="fa fa-times-circle text-danger"></span>
+</label>
+<form class="mt-1" [collapse]="isCollapsed">
+    <div class="form-group">
+        <textarea
+            id="rawInput"
+            name="rawInput"
+            rows="8"
+            [ngModel]="rawData"
+            (input)="onRawChange($event.target.value)"></textarea>
+        <!-- <input id="rawInput" #rawInput class="form-control" type="text" name="rawData" autocomplete="off"
+            [(ngModel)]="rawData" (input)="onRawChange($event.target.value)"> -->
+    </div>
+</form>
+<hr>
